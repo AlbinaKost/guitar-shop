@@ -6,11 +6,11 @@ function rendrer() {
 
 let CATALOG = [];
 
-rendrer();
 fetch("server/catalog.json")
   .then((res) => res.json())
   .then((body) => {
     CATALOG = body;
+    rendrer();
   })
   .catch((error) => {
     console.log(error);
